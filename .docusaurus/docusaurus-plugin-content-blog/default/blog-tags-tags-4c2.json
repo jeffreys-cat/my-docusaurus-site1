@@ -1,0 +1,16 @@
+{
+  "foo": {
+    "allTagsPath": "/blog/tags",
+    "slug": "foo",
+    "name": "foo",
+    "count": 1,
+    "permalink": "/blog/tags/foo"
+  },
+  "bar": {
+    "allTagsPath": "/blog/tags",
+    "slug": "bar",
+    "name": "bar",
+    "count": 1,
+    "permalink": "/blog/tags/bar"
+  }
+}
