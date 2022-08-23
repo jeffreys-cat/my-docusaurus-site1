@@ -7,8 +7,8 @@ on:
         description: 'Specify the branch name'
         required: true
         default: 'master'
-# env:
-#   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
 jobs:
   build-and-deploy:
@@ -45,32 +45,44 @@ jobs:
     #       endpoint: ${{ secrets.ALIYUN_OSS_ENDPOINT }}
     #       folder: build
 
-    - name: Deploy website
+    # - name: Deploy website
+    #   if: ${{ github.event.inputs.branch == 'master' }}
+    #   run: |
+    #     git config --global http.postBuffer 524288000
+    #     git fetch
+    #     git checkout -b asf-site remotes/origin/asf-site
+    #     cp -r build/* ./
+    #     rm -rf build/
+    #     rm -rf .docusaurus
+    #     rm -rf node_modules
+    #     rm -rf doris
+    #     rm -rf yarn.lock
+    #     rm -rf versioned_docs/
+    #     rm -rf versioned_idebars
+    #     rm -rf i18n/
+    #     git config user.name "github-actions[bot]"
+    #     git config user.email "github-actions[bot]@users.noreply.github.com"
+    #     git add .
+    #     git commit -m "Automated deployment with doris master"
+    #     git push --verbose "https://${{ secrets.GITHUB_TOKEN }}@github.com/jeffreys-cat/my-docusaurus-site1.git" asf-site:asf-site
+
+    - name: Deploy Website
       if: ${{ github.event.inputs.branch == 'master' }}
-      run: |
-        git config --global http.postBuffer 524288000
-        git fetch
-        git checkout -b asf-site remotes/origin/asf-site
-        cp -r build/* ./
-        rm -rf build/
-        rm -rf .docusaurus
-        rm -rf node_modules
-        rm -rf doris
-        rm -rf yarn.lock
-        rm -rf versioned_docs/
-        rm -rf versioned_sidebars
-        rm -rf i18n/
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
-        git commit -m "Automated deployment with doris master"
-        git push --verbose "https://${{ secrets.GITHUB_TOKEN }}@github.com/jeffreys-cat/my-docusaurus-site1.git" asf-site:asf-site
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: $GITHUB_TOKEN
+        publish_branch: asf-site
+        publish_dir: ./build
+        destination_dir: ./
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        commit_message: 'Automated deployment with doris branch ${{ github.event.inputs.branch }}@${{ env.DORIS_COMMIT }}'
         
     - name: Deploy Branch
       if: ${{ github.event.inputs.branch != 'master' }}
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: $GITHUB_TOKEN
         publish_branch: asf-site
         publish_dir: ./build
         destination_dir: ${{ github.event.inputs.branch }}
