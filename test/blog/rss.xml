@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>My Site Blog</title>
+        <link>https://your-docusaurus-test-site.com/blog</link>
+        <description>My Site Blog</description>
+        <lastBuildDate>Thu, 14 Jul 2022 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[MyName]]></title>
+            <link>https://your-docusaurus-test-site.com/blog/Image</link>
+            <guid>Image</guid>
+            <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is an Image]]></description>
+        </item>
+        <item>
+            <title><![CDATA[URL TEST]]></title>
+            <link>https://your-docusaurus-test-site.com/blog/doris</link>
+            <guid>doris</guid>
+            <pubDate>Thu, 14 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[H]]></description>
+        </item>
+        <item>
+            <title><![CDATA[CREATE BLOG BY CMS]]></title>
+            <link>https://your-docusaurus-test-site.com/blog/分享</link>
+            <guid>分享</guid>
+            <pubDate>Fri, 01 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[CREATE BLOG BY CMS]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Imgae Test]]></title>
+            <link>https://your-docusaurus-test-site.com/blog/doris</link>
+            <guid>doris</guid>
+            <pubDate>Fri, 01 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Here is an imaging test]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Jeffrey First Blog Post]]></title>
+            <link>https://your-docusaurus-test-site.com/blog/first-blog-post</link>
+            <guid>first-blog-post</guid>
+            <pubDate>Mon, 15 Nov 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat.]]></description>
+        </item>
+    </channel>
+</rss>

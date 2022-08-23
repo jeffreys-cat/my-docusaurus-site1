@@ -1,0 +1,27 @@
+backend:
+  name: github
+  branch: master 
+  repo: colordove/my-docusaurus-site1
+
+# These lines should *not* be indented
+media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
+publish_mode: editorial_workflow
+
+collections:
+- name: blog
+  label: "博客"
+  folder: blog
+  identifier_field: title
+  extension: md
+  widget: "list"
+  create: true
+  slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+  fields:
+    - { name: title, label: 标题, widget: string }
+    - { name: body, label: 内容, widget: markdown }
+    - label: "标签"
+      name: "tags"
+      widget: "list"
+    - label: "作者"
+      name: "authors" 
