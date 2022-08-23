@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://your-docusaurus-test-site.com/blog</id>
+    <title>My Site Blog</title>
+    <updated>2022-07-14T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://your-docusaurus-test-site.com/blog"/>
+    <subtitle>My Site Blog</subtitle>
+    <icon>https://your-docusaurus-test-site.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[MyName]]></title>
+        <id>Image</id>
+        <link href="https://your-docusaurus-test-site.com/blog/Image"/>
+        <updated>2022-07-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Here is an Image]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[URL TEST]]></title>
+        <id>doris</id>
+        <link href="https://your-docusaurus-test-site.com/blog/doris"/>
+        <updated>2022-07-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[H]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CREATE BLOG BY CMS]]></title>
+        <id>分享</id>
+        <link href="https://your-docusaurus-test-site.com/blog/分享"/>
+        <updated>2022-07-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[CREATE BLOG BY CMS]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Imgae Test]]></title>
+        <id>doris</id>
+        <link href="https://your-docusaurus-test-site.com/blog/doris"/>
+        <updated>2022-07-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Here is an imaging test]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Jeffrey First Blog Post]]></title>
+        <id>first-blog-post</id>
+        <link href="https://your-docusaurus-test-site.com/blog/first-blog-post"/>
+        <updated>2021-11-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat.]]></summary>
+    </entry>
+</feed>
