@@ -1,0 +1,21 @@
+{
+  "permalink": "/blog/Image",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/blog/blog/2022-07-14-myname.md",
+  "source": "@site/blog/2022-07-14-myname.md",
+  "title": "MyName",
+  "description": "Here is an Image",
+  "date": "2022-07-14T00:00:00.000Z",
+  "formattedDate": "2022年7月14日",
+  "tags": [
+    {
+      "label": "Image",
+      "permalink": "/blog/tags/image"
+    }
+  ],
+  "readingTime": 0.025,
+  "truncated": false,
+  "nextItem": {
+    "title": "URL TEST",
+    "permalink": "/blog/doris"
+  }
+}

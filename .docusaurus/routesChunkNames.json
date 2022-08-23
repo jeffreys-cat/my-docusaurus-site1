@@ -25,20 +25,47 @@
   "/__docusaurus/debug/routes-244": {
     "component": "component---theme-debug-routes-946-699"
   },
-  "/blog-b14": {
+  "/blog-5b6": {
     "component": "component---theme-blog-list-pagea-6-a-7ba",
     "sidebar": "sidebar---blog-814-8ac",
     "items": [
+      {
+        "content": "content---blog-850-b30"
+      },
+      {
+        "content": "content---blog-600-b47"
+      },
+      {
+        "content": "content---blog-591-0dd"
+      },
+      {
+        "content": "content---blog-600-b47"
+      },
       {
         "content": "content---blogd-78-e46"
       }
     ],
     "metadata": "metadata---blogb-2-b-df1"
   },
+  "/blog/doris-832": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-doris-2-d-7-315"
+  },
+  "/blog/doris-a6d": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-doris-511-c68"
+  },
   "/blog/first-blog-post-e2f": {
     "component": "component---theme-blog-post-pageccc-cab",
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-first-blog-post-78-e-1d6"
+  },
+  "/blog/Image-f5a": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-imagee-1-d-70b"
   },
   "/blog/tags-e13": {
     "component": "component---theme-blog-tags-list-page-01-a-d0b",
@@ -55,6 +82,22 @@
     ],
     "metadata": "metadata---blog-tags-bar-8-fc-fb4"
   },
+  "/blog/tags/doris-417": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-600-b47"
+      },
+      {
+        "content": "content---blog-591-0dd"
+      },
+      {
+        "content": "content---blog-600-b47"
+      }
+    ],
+    "metadata": "metadata---blog-tags-doris-831-e3d"
+  },
   "/blog/tags/foo-b99": {
     "component": "component---theme-blog-tags-posts-page-687-b6c",
     "sidebar": "sidebar---blog-814-8ac",
@@ -64,6 +107,21 @@
       }
     ],
     "metadata": "metadata---blog-tags-foo-86-b-bf9"
+  },
+  "/blog/tags/image-405": {
+    "component": "component---theme-blog-tags-posts-page-687-b6c",
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-850-b30"
+      }
+    ],
+    "metadata": "metadata---blog-tags-imagee-6-f-f53"
+  },
+  "/blog/分享-ab5": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-分享-580-108"
   },
   "/markdown-page-be1": {
     "component": "component---theme-mdx-page-1-f-3-b90",

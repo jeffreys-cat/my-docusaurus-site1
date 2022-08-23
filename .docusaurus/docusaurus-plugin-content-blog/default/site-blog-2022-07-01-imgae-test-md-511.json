@@ -1,0 +1,25 @@
+{
+  "permalink": "/blog/doris",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/blog/blog/2022-07-01-imgae-test.md",
+  "source": "@site/blog/2022-07-01-imgae-test.md",
+  "title": "Imgae Test",
+  "description": "Here is an imaging test",
+  "date": "2022-07-01T00:00:00.000Z",
+  "formattedDate": "2022年7月1日",
+  "tags": [
+    {
+      "label": "Doris",
+      "permalink": "/blog/tags/doris"
+    }
+  ],
+  "readingTime": 0.03,
+  "truncated": false,
+  "prevItem": {
+    "title": "CREATE BLOG BY CMS",
+    "permalink": "/blog/分享"
+  },
+  "nextItem": {
+    "title": "Jeffrey First Blog Post",
+    "permalink": "/blog/first-blog-post"
+  }
+}

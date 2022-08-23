@@ -44,12 +44,27 @@ export default [
 },
 {
   path: '/blog',
-  component: ComponentCreator('/blog','b14'),
+  component: ComponentCreator('/blog','5b6'),
+  exact: true,
+},
+{
+  path: '/blog/doris',
+  component: ComponentCreator('/blog/doris','832'),
+  exact: true,
+},
+{
+  path: '/blog/doris',
+  component: ComponentCreator('/blog/doris','a6d'),
   exact: true,
 },
 {
   path: '/blog/first-blog-post',
   component: ComponentCreator('/blog/first-blog-post','e2f'),
+  exact: true,
+},
+{
+  path: '/blog/Image',
+  component: ComponentCreator('/blog/Image','f5a'),
   exact: true,
 },
 {
@@ -63,8 +78,23 @@ export default [
   exact: true,
 },
 {
+  path: '/blog/tags/doris',
+  component: ComponentCreator('/blog/tags/doris','417'),
+  exact: true,
+},
+{
   path: '/blog/tags/foo',
   component: ComponentCreator('/blog/tags/foo','b99'),
+  exact: true,
+},
+{
+  path: '/blog/tags/image',
+  component: ComponentCreator('/blog/tags/image','405'),
+  exact: true,
+},
+{
+  path: '/blog/分享',
+  component: ComponentCreator('/blog/分享','ab5'),
   exact: true,
 },
 {
