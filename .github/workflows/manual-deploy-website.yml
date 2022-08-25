@@ -7,6 +7,16 @@ on:
         description: 'Specify the branch name'
         required: true
         default: 'master'
+      doc_version:
+        description: 'Generate PDF for doc version'
+        required: true
+        default: '1.1'
+        type: "choice"
+        options: 
+          - "ALL"
+          - "1.1"
+          - "0.15"
+          - "dev"
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
@@ -35,16 +45,57 @@ jobs:
         ls build
         export DORIS_COMMIT=`git rev-parse HEAD`
 
-    - name: Generate PDF
+    - uses: ./.github/actions/paths-filter@v2
+      id: changes
+      with:
+        filters: |
+          docs:
+            - 'docs/**'
+          docs_zh_CN:
+            - 'i18n/zh-CN/docusaurus-plugin-content-docs/current/**'
+          version_0.15:
+            - 'versioned_docs/version-0.15/**'
+          version_0.15_zh_CN:
+            - 'i18n/zh-CN/docusaurus-plugin-content-docs/version-0.15/**'
+
+    
+      # run: |
+      #   npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 1.1 (English)" --outputPDFFilename="Apache Doris 1.1 (English).pdf"
+      #   npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris Dev (English)" --outputPDFFilename="Apache Doris Dev (English).pdf"
+      #   npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 0.15 (English)" --outputPDFFilename="Apache Doris 0.15 (English).pdf"
+      #   npx vitpress-generate-pdf -buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 1.1 (中文)" --outputPDFFilename="Apache Doris 1.1 (中文).pdf"
+      #   npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris Dev (中文)" --outputPDFFilename="Apache Doris Dev (中文).pdf"
+      #   npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 0.15 (中文)" --outputPDFFilename="Apache Doris 0.15 (中文).pdf"
+        # mkdir -p ./build/assets/files/
+        # cp *.pdf ./build/assets/files/
+      # if: ${{ github.event.inputs.doc_version == '1.1'}}
+    - name: Generate PDF docs_1.1
+      if: steps.changes.outputs.docs == 'true'
       run: |
         npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 1.1 (English)" --outputPDFFilename="Apache Doris 1.1 (English).pdf"
-        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris Dev (English)" --outputPDFFilename="Apache Doris Dev (English).pdf"
-        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 0.15 (English)" --outputPDFFilename="Apache Doris 0.15 (English).pdf"
-        npx vitpress-generate-pdf -buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 1.1 (中文)" --outputPDFFilename="Apache Doris 1.1 (中文).pdf"
-        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris Dev (中文)" --outputPDFFilename="Apache Doris Dev (中文).pdf"
-        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 0.15 (中文)" --outputPDFFilename="Apache Doris 0.15 (中文).pdf"
         mkdir -p ./build/assets/files/
-        cp *.pdf ./build/assets/files/
+        cp *.pdf ./build/assets/file
+
+    - name: Generate PDF docs_1.1_zh_CN
+      if: steps.changes.outputs.docs_zh_CN == 'true'
+      run: |
+        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 1.1 (English)" --outputPDFFilename="Apache Doris 1.1 (English).pdf"
+        mkdir -p ./build/assets/files/
+        cp *.pdf ./build/assets/file
+
+    - name: Generate PDF version_0.15
+      if: steps.changes.outputs.version_0.15 == 'true'
+      run: |
+        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 1.1 (English)" --outputPDFFilename="Apache Doris 1.1 (English).pdf"
+        mkdir -p ./build/assets/files/
+        cp *.pdf ./build/assets/file
+
+    - name: Generate PDF version_0.15_zh_CN
+      if: steps.changes.outputs.version_0.15_zh_CN == 'true'
+      run: |
+        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 1.1 (English)" --outputPDFFilename="Apache Doris 1.1 (English).pdf"
+        mkdir -p ./build/assets/files/
+        cp *.pdf ./build/assets/file
 
     - name: Upload files to OSS
       uses: ./.github/actions/aliyun-oss-website-action
