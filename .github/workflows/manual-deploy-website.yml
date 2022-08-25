@@ -46,7 +46,7 @@ jobs:
         export DORIS_COMMIT=`git rev-parse HEAD`
 
     - name: Set Path Filter
-    - uses: ./.github/actions/paths-filter@v2
+    - uses: ./.github/actions/paths-filter
       id: changes
       with:
         filters: |
