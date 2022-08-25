@@ -73,7 +73,7 @@ jobs:
         mkdir -p ./build/assets/files/
         cp *.pdf ./build/assets/file
 
-    - name: Generate PDF version_0.15_zh_CN
+    - name: Generate PDF dev
       if: ${{ github.event.inputs.doc_version == 'dev'}}
       run: |
         npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris Dev (English)" --outputPDFFilename="Apache Doris Dev (English).pdf"
