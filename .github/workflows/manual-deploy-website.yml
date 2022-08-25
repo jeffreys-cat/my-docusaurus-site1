@@ -52,6 +52,7 @@ jobs:
         npx vitpress-generate-pdf -buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 1.1 (中文)" --outputPDFFilename="Apache Doris 1.1 (中文).pdf"
         npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris Dev (中文)" --outputPDFFilename="Apache Doris Dev (中文).pdf"
         npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 0.15 (中文)" --outputPDFFilename="Apache Doris 0.15 (中文).pdf"
+        mkdir -p ./build/assets/files/
         cp *.pdf ./build/assets/files/
 
     - name: Deploy Website
