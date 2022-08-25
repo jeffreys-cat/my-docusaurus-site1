@@ -1,7 +1,6 @@
 {
+  "label": "bar",
+  "permalink": "/blog/tags/bar",
   "allTagsPath": "/blog/tags",
-  "slug": "bar",
-  "name": "bar",
-  "count": 1,
-  "permalink": "/blog/tags/bar"
+  "count": 1
 }

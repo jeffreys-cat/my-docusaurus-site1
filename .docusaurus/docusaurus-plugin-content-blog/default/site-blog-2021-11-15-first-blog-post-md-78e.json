@@ -17,7 +17,33 @@
     }
   ],
   "readingTime": 0.095,
-  "truncated": false,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Garrison McMullen",
+      "title": "Instruction Writer",
+      "url": "https://github.com/garrison0",
+      "image_url": "https://avatars.githubusercontent.com/u/4089393?v=4",
+      "imageURL": "https://avatars.githubusercontent.com/u/4089393?v=4"
+    }
+  ],
+  "frontMatter": {
+    "title": "Jeffrey First Blog Post",
+    "slug": "first-blog-post",
+    "tags": [
+      "foo",
+      "bar"
+    ],
+    "authors": [
+      {
+        "name": "Garrison McMullen",
+        "title": "Instruction Writer",
+        "url": "https://github.com/garrison0",
+        "image_url": "https://avatars.githubusercontent.com/u/4089393?v=4",
+        "imageURL": "https://avatars.githubusercontent.com/u/4089393?v=4"
+      }
+    ]
+  },
   "prevItem": {
     "title": "Imgae Test",
     "permalink": "/blog/doris"

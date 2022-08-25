@@ -55,9 +55,19 @@
               "path": "/docs/tutorial-extras/translate-your-site",
               "sidebar": "tutorialSidebar"
             }
-          ]
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
         }
-      ]
+      ],
+      "breadcrumbs": true
     }
   }
 }

@@ -13,7 +13,15 @@
     }
   ],
   "readingTime": 0.025,
-  "truncated": false,
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {
+    "title": "MyName",
+    "slug": "Image",
+    "tags": [
+      "Image"
+    ]
+  },
   "nextItem": {
     "title": "URL TEST",
     "permalink": "/blog/doris"

@@ -44,27 +44,15 @@ jobs:
           # use your own endpoint
           endpoint: ${{ secrets.ALIYUN_OSS_ENDPOINT }}
           folder: build
-
-    # - name: Deploy website
-    #   if: ${{ github.event.inputs.branch == 'master' }}
-    #   run: |
-    #     git config --global http.postBuffer 524288000
-    #     git fetch
-    #     git checkout -b asf-site remotes/origin/asf-site
-    #     cp -r build/* ./
-    #     rm -rf build/
-    #     rm -rf .docusaurus
-    #     rm -rf node_modules
-    #     rm -rf doris
-    #     rm -rf yarn.lock
-    #     rm -rf versioned_docs/
-    #     rm -rf versioned_idebars
-    #     rm -rf i18n/
-    #     git config user.name "github-actions[bot]"
-    #     git config user.email "github-actions[bot]@users.noreply.github.com"
-    #     git add .
-    #     git commit -m "Automated deployment with doris master"
-    #     git push --verbose "https://${{ secrets.GITHUB_TOKEN }}@github.com/jeffreys-cat/my-docusaurus-site1.git" asf-site:asf-site
+    - name: Generate PDF
+      run: |
+        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 1.1 (English)" --outputPDFFilename="Apache Doris 1.1 (English).pdf"
+        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris Dev (English)" --outputPDFFilename="Apache Doris Dev (English).pdf"
+        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 0.15 (English)" --outputPDFFilename="Apache Doris 0.15 (English).pdf"
+        npx vitpress-generate-pdf -buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 1.1 (中文)" --outputPDFFilename="Apache Doris 1.1 (中文).pdf"
+        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris Dev (中文)" --outputPDFFilename="Apache Doris Dev (中文).pdf"
+        npx vitpress-generate-pdf --buildDirPath="./build/"  --firstDocPath="/docs/intro" --paginationSelector=".pagination-nav__link--next" --contentSelector="article" --coverImage="https://cdn.selectdb.com/images/doris-logo-512.png" --coverTitle="Apache Doris 0.15 (中文)" --outputPDFFilename="Apache Doris 0.15 (中文).pdf"
+        cp *.pdf ./build/assets/files/
 
     - name: Deploy Website
       if: ${{ github.event.inputs.branch == 'master' }}

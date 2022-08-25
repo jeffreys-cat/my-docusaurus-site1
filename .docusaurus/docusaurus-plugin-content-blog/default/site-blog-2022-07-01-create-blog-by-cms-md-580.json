@@ -13,7 +13,15 @@
     }
   ],
   "readingTime": 0.02,
-  "truncated": false,
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {
+    "title": "CREATE BLOG BY CMS",
+    "slug": "分享",
+    "tags": [
+      "Doris"
+    ]
+  },
   "prevItem": {
     "title": "URL TEST",
     "permalink": "/blog/doris"

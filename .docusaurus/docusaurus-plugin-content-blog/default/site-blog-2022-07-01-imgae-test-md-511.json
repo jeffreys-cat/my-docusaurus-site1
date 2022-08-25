@@ -13,7 +13,30 @@
     }
   ],
   "readingTime": 0.03,
-  "truncated": false,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Jeffrey",
+      "title": "Jeffrey",
+      "url": "./",
+      "imageUrl": "'./'"
+    }
+  ],
+  "frontMatter": {
+    "title": "Imgae Test",
+    "slug": "doris",
+    "tags": [
+      "Doris"
+    ],
+    "authors": [
+      {
+        "name": "Jeffrey",
+        "title": "Jeffrey",
+        "url": "./",
+        "imageUrl": "'./'"
+      }
+    ]
+  },
   "prevItem": {
     "title": "CREATE BLOG BY CMS",
     "permalink": "/blog/分享"
