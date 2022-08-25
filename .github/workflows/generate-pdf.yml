@@ -1,4 +1,4 @@
-name: Manual Deploy And Upload To OSS
+name: Generate PDF
 
 on: 
   workflow_dispatch:
