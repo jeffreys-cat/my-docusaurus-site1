@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_starter=self.webpackChunkdocusaurus_starter||[]).push([[458],{9913:s=>{s.exports=JSON.parse('{"permalink":"/blog/tags/doris","page":1,"postsPerPage":10,"totalPages":1,"totalCount":3,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
