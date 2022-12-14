@@ -3,8 +3,43 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/__docusaurus/debug',
+    component: ComponentCreator('/__docusaurus/debug', 'c9f'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/config',
+    component: ComponentCreator('/__docusaurus/debug/config', '359'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/content',
+    component: ComponentCreator('/__docusaurus/debug/content', '173'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/globalData',
+    component: ComponentCreator('/__docusaurus/debug/globalData', '161'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/metadata',
+    component: ComponentCreator('/__docusaurus/debug/metadata', 'f23'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/registry',
+    component: ComponentCreator('/__docusaurus/debug/registry', 'f05'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/routes',
+    component: ComponentCreator('/__docusaurus/debug/routes', 'bbc'),
+    exact: true
+  },
+  {
     path: '/blog',
-    component: ComponentCreator('/blog', 'ded'),
+    component: ComponentCreator('/blog', '888'),
     exact: true
   },
   {
@@ -14,12 +49,12 @@ export default [
   },
   {
     path: '/blog/doris',
-    component: ComponentCreator('/blog/doris', '007'),
+    component: ComponentCreator('/blog/doris', '2bb'),
     exact: true
   },
   {
     path: '/blog/doris',
-    component: ComponentCreator('/blog/doris', '2bb'),
+    component: ComponentCreator('/blog/doris', '007'),
     exact: true
   },
   {
@@ -44,7 +79,7 @@ export default [
   },
   {
     path: '/blog/tags/doris',
-    component: ComponentCreator('/blog/tags/doris', 'f08'),
+    component: ComponentCreator('/blog/tags/doris', '7a6'),
     exact: true
   },
   {
