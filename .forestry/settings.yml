@@ -5,15 +5,12 @@ admin_path:
 webhook_url: 
 sections: 
 - type: directory
-  path: tutorial-basics
-  label: 基础教程
-  create: all
+  path: docs
+  label: 文档
+  create: documents
   match: "**/*"
-- type: directory
-  path: tutorial-extras
-  label: 高级教程
-  create: all
-  match: "**/*"
+  templates:
+  - page
 - type: directory
   path: blog
   label: Blog
